@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //remove duplicates by iffe function
+        (function(a){
+    var b=[];
+    var n=a.length;
+    for(let i=0;i<n-1;i++)
+    {
+        for(let j=i+1;j<n;j++)
+        {
+            if(a[i]===a[j])
+            {
+                delete a[j]
+            }
+        }
+    }
+    for(let i=0;i<a.length;i++)
+    {
+        if(a[i]%10===Math.floor(a[i]%10))
+        {
+            b.push(a[i])
+        }
+    }
+    let c=""
+    for(let i=0;i<b.length-1;i++)
+     {
+         c+=b[i]+" ";
+    }
+    c+=b[b.length-1];
+     console.log(c);
+
+})([1,1,2,1,2,3,3,3,4,3,3,5,7,8,3,2,2,2]);
+
+//remove duplicates by anonymous function
+
+var arr=function(a){
+    var b=[];
+    var n=a.length;
+    for(let i=0;i<n-1;i++)
+    {
+        for(let j=i+1;j<n;j++)
+        {
+            if(a[i]===a[j])
+            {
+                delete a[j]
+            }
+        }
+    }
+    for(let i=0;i<a.length;i++)
+    {
+        if(a[i]%10===Math.floor(a[i]%10))
+        {
+            b.push(a[i])
+        }
+    }
+    let c=""
+    for(let i=0;i<b.length-1;i++)
+     {
+         c+=b[i]+" ";
+    }
+    c+=b[b.length-1];
+     return c;
+
+}
+console.log(arr([1,1,2,1,2,3,3,3,4,3,3,3,3,2,2,2]));
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
