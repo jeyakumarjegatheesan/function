@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        //rotate an array by k times using anonymous function
+    
+    // var rotate=function(a,k){
+    //     n=a.length;
+    //  c=[];
+    //   d="";
+    //   for(i=0;i<n;i++)
+    //   {
+    //       c[(i+k)%(n)]=a[i]
+    //   }
+    //   for(i=0;i<c.length-1;i++)
+    //   {
+    //       d+=c[i]+" "
+    //   }
+    //   d+=c[c.length-1]
+    //   return d;
+    // }
+    // console.log(rotate([1,2,3,4,5],2))
+
+    //rotate an array by k times using anonymous function
+
+
+    (function(a,k){
+               n=a.length;
+               c=[];
+               d="";
+               for(i=0;i<n;i++)
+  {
+      c[(i+k)%(n)]=a[i]
+  }
+  for(i=0;i<c.length-1;i++)
+  {
+      d+=c[i]+" "
+  }
+  d+=c[c.length-1]
+  console.log(d);
+}) ([1,2,3,4,5],3);
+ 
+ 
+
+    </script>
+    
+</body>
+</html>

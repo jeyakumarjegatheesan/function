@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//sring title caps by using iffe function
+
+//         (function (string) {
+//     var sent = string.toLowerCase().split(" ");
+//     for(var i = 0; i< sent.length; i++){
+//        sent[i] = sent[i][0].toUpperCase() + sent[i].slice(1);
+//     }
+//  sent.join(" ");
+//  var res="";
+//  for(let i=0;i<sent.length-1;i++)
+//  {
+//      res+=sent[i]+" "
+//  }
+//  res+=sent[sent.length-1]
+//  console.log(res);
+//  }) ("we are guvian");
+
+//sring title caps by using anonymous function
+
+ var str=function (string) {
+    var sent = string.toLowerCase().split(" ");
+    for(var i = 0; i< sent.length; i++){
+       sent[i] = sent[i][0].toUpperCase() + sent[i].slice(1);
+    }
+ sent.join(" ");
+ var res="";
+ for(let i=0;i<sent.length-1;i++)
+ {
+     res+=sent[i]+" "
+ }
+ res+=sent[sent.length-1]
+ return res;
+ }
+ console.log(str("we are guvian"));
+    </script>
+    
+</body>
+</html>
